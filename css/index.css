@@ -6,6 +6,11 @@ html, body {
 	font-size: 16px;
 	line-height: 1;
 	height: 10000px;
+	text-align: center;
+}
+.wrapper {
+	max-width: 1600px;
+	margin: auto;
 }
 
 /* header-wrapper :: 헤더 메뉴 */
@@ -14,8 +19,11 @@ html, body {
 	background-color: #d4e3ffc5;
 	color: #555;
 	position: fixed;
+	top: 0;
+	left: 0;
 	box-shadow: 0 0 5px rgba(0, 0, 0, .7);
 	font-family: 'Ubuntu Condensed', sans-serif;
+	z-index: 99;
 }
 .header-wrapper .header-wrap {
 	display: flex;
@@ -50,11 +58,15 @@ html, body {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+	display: none;
 }
-.header-wrapper .navi-wrap .navi {
+.header-wrapper .navi-wrap .navi{
 	flex: 1;
 	text-align: center;
 	display: block;
+}
+.header-wrapper .navi-wrap .navi > a {
+	width: 100%;
 	padding: 1em 1.25em;
 }
 .header-wrapper .navi-wrap .navi:hover {
@@ -90,6 +102,42 @@ html, body {
 	background-color: #ccc;
 }
 
+/* main-wrapper */
+.main-wrapper {
+	width: 100%;
+	font-size: 3em;
+	text-align: center;
+	margin-top: 96px;
+	padding: 2em 0;
+	line-height: 2;
+	letter-spacing: -5px;
+}
+.main-wrapper .title i {
+	margin-top: .5em;
+	font-size: 1.25em;
+	animation: 1s infinite splatter;
+	transition: all .5s;
+	display: none;
+}
+@keyframes splatter {
+	0% { transform: translateY(30px); }
+	50% { transform: translateY(0); }
+	100% { transform: translateY(30px); }
+}
+
+.main-wrapper .title .typing-txt {
+	display: none;
+}
+.typing ul li.on {
+	display: inline;
+	animation: .3s infinite cursor;
+}
+@keyframes cursor{
+	0%{ border-right: 1px solid #fff; }
+	50%{ border-right: 1px solid #000; }
+	100%{ border-right: 1px solid #fff; }
+}
+
 /* responsive */
 @media (max-width: 1200px) {
 	
@@ -117,7 +165,9 @@ html, body {
 	.header-wrapper .monavi-wrap {
 		display: block;
 	}
-
+	.main-wrapper {
+		margin-top: 64px;
+	}
 }
 @media (max-width: 576px) {
 	

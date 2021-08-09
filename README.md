@@ -8,3 +8,6 @@
 ### 전체적으로 사용한 색상
 1. 배경색 : 
 2. 글씨색 : 
+
+
+typing animation 참고 사이트 : https://gahyun-web-diary.tistory.com/2
