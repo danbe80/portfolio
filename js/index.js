@@ -44,7 +44,14 @@ $(function () {
 		}
 	}
 
-	const offset = $("#profile").offset() - 100;
-	$('html, body').animate({ scrollTop: offset.top }, 500);
+	var winH = window.innerHeight;
+	var scrollY = window.scrollY;
+
+	const offsetprofile = $("#profile").offset();
+	$('html, body').animate({ scrollTop: offsetprofile.top }, 500);
+	const offsetpofo = $("#pofo").offset();
+	$('html, body').animate({ scrollTop: offsetpofo.top }, 500);
+	const offsetskill = $("#skills").offset();
+	$('html, body').animate({ scrollTop: offsetskill.top }, 500);
 
 });
