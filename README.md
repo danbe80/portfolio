@@ -11,3 +11,4 @@
 
 
 typing animation 참고 사이트 : https://gahyun-web-diary.tistory.com/2
+scroll event site : https://nykim.work/56?category=692676
