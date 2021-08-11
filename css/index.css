@@ -44,6 +44,10 @@ html, body {
 	text-align: center;
 	cursor: pointer;
 }
+.header-wrap .logo > a{
+	display: flex;
+	flex-direction: column;
+}
 .header-wrapper .header-wrap .bars {
 	display: none;
 }
@@ -106,6 +110,7 @@ html, body {
 /* main-wrapper */
 .main-wrapper {
 	width: 100%;
+	height: 800px;
 	font-size: 3em;
 	text-align: center;
 	padding: 2em 0;
@@ -176,7 +181,6 @@ html, body {
 	width: 70%;
 	border: 1px solid blue;
 	display: flex;
-	text-align: center;
 	flex-direction: column;
 	margin: .5em 1% 0 1.5em;
 }
@@ -184,6 +188,13 @@ html, body {
 	font-size: 1em;
 	font-weight: bold;
 	margin-bottom: 1em;
+	letter-spacing: -2px;
+	display: flex;
+	justify-content: center;
+}
+.profile-wrap .profile-content .content-title i {
+	font-size: .5em;
+	padding: 0 .325em;
 }
 .profile-wrap .profile-content .content {
 	font-size: .75em;
@@ -219,6 +230,7 @@ html, body {
 	justify-content: center;
 	align-items: center;
 	padding: 2.5em 0;
+	overflow: visible ;
 }
 .portfolio-wrapper .portfolio-wrap .content-wrap li {
 	display: none;
@@ -277,10 +289,17 @@ html, body {
 
 /* responsive */
 @media (max-width: 1200px) {
-	
+	.profile-wrap .profile-content .content-title .title {
+		font-size: .875em;
+	}
+	.profile-wrap .profile-content .content-title > i {
+		font-size: .325em;
+	}
 }
 @media (max-width: 992px) {
-	
+	.profile-wrap .profile-content .content-title .title {
+		font-size: .7em;
+	}
 }
 @media (max-width: 768px) {
 	.header-wrapper .header-wrap {
@@ -304,6 +323,9 @@ html, body {
 	}
 	.main-wrapper {
 		margin-top: 64px;
+	}
+	.profile-wrap .profile-content .content-title .title {
+		font-size: .625em;
 	}
 }
 @media (max-width: 576px) {

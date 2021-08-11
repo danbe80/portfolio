@@ -4,6 +4,10 @@ $(function () {
 	var typingIdx = 0;
 	var liIndex = 0;
 	var liLength = $(".typing-txt>ul>li").length;
+	var $headerWrapper = $('.header-wrapper');
+	var $headerWrap = $('.header-wrap');
+	var $naviWrap = $('.header-wrapper .navi-wrap');
+
 
 	// 타이핑될 텍스트를 가져온다 
 	var typingTxt = $(".typing-txt>ul>li").eq(liIndex).text();
@@ -44,14 +48,29 @@ $(function () {
 		}
 	}
 
-	var winH = window.innerHeight;
+/* 	var winH = window.innerHeight;
 	var scrollY = window.scrollY;
-
-	const offsetprofile = $("#profile").offset();
+ */
+/* 	const offsetprofile = $("#about").offset();
 	$('html, body').animate({ scrollTop: offsetprofile.top }, 500);
 	const offsetpofo = $("#pofo").offset();
 	$('html, body').animate({ scrollTop: offsetpofo.top }, 500);
 	const offsetskill = $("#skills").offset();
 	$('html, body').animate({ scrollTop: offsetskill.top }, 500);
+
+ */
+	$(window).scroll(function(){
+		var height = $(document).scrollTop();
+		// console.log(height)
+		if(height >= 400){
+			$('.header-wrap .navi-wrap .logo').css('display', 'inline-block');
+			$naviWrap.css('display', 'flex');
+			$headerWrapper.css('background-color', '#d4e3ff');
+		}
+		else{
+			$headerWrapper.css('backgound-color', '#d4e3ffc5');
+			$naviWrap.css('display', 'none');
+		}
+	})
 
 });
