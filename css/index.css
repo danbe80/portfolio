@@ -221,11 +221,12 @@ html, body {
 	opacity: 1;
 }
 .portfolio-wrapper .portfolio-wrap {
-	display: flex;
-	width: 100%;
+	width: 80%;
 	margin: 0 10%;
 }
 .portfolio-wrapper .portfolio-wrap .content-wrap {
+	width: 100%;
+	margin: 0 1%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -235,7 +236,15 @@ html, body {
 .portfolio-wrapper .portfolio-wrap .content-wrap li {
 	display: none;
 }
+.portfolio-wrapper .portfolio-wrap .content-wrap li > a {
+	width: 50%;
+}
+.portfolio-wrapper .portfolio-wrap .content-wrap li > a > img {
+	width: 100%;
+}
 .portfolio-wrap .content-wrap li > div {
+	border: 1px solid rebeccapurple;
+	width: 50%;
 	margin-left: 2em;
 
 }
