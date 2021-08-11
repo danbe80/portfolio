@@ -62,14 +62,17 @@ $(function () {
 	$(window).scroll(function(){
 		var height = $(document).scrollTop();
 		// console.log(height)
+		var $logo = $('.header-wrap .logo > a');
+		console.log($logo);
 		if(height >= 400){
-			$('.header-wrap .navi-wrap .logo').css('display', 'inline-block');
+			$('.header-wrap .logo > a').css('display', 'inline-block');
 			$naviWrap.css('display', 'flex');
 			$headerWrapper.css('background-color', '#d4e3ff');
 		}
 		else{
-			$headerWrapper.css('backgound-color', '#d4e3ffc5');
+			$headerWrapper.css('background-color', '#d4e3ffc5');
 			$naviWrap.css('display', 'none');
+			$('.header-wrap .logo > a').css('display', 'flex');
 		}
 	})
 
