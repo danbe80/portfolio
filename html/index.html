@@ -1,34 +1,40 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>MyPoFo</title>
 	<link rel="stylesheet" href="../css/all.min.css">
-	<link rel="stylesheet" href="../css/fullpage.min.css">
+	<!-- <link rel="stylesheet" href="../css/fullpage.min.css"> -->
 	<link rel="stylesheet" href="../css/base.css">
 	<link rel="stylesheet" href="../css/index.css">
 	<script src="../js/jquery-3.5.1.min.js"></script>
 </head>
 
-<body id="fullpage">
+<body>
 	<header class="header-wrapper">
 		<div class="header-wrap">
-			<h1 class="logo"><a href="#">MY <span>POFO</span></a></h1> 
+			<h1 class="logo"><a class="home" href="#">MY <span>POFO</span></a></h1> 
 			<span class="bars"><i class="fa fa-bars"></i></span>
 		</div>
-		<ul class="navi-wrap" id="navi">
-			<li class="navi" data-navianchor="anchor1"><a href="#">HOME</a></li>
-			<li class="navi" data-navianchor="anchor2"><a href="#about">PROFILE</a></li>
-			<li class="navi" data-navianchor="anchor3"><a href="#pofo">PORTFOLIO</a></li>
-			<li class="navi" data-navianchor="anchor4"><a href="#skills">SKILL</a></li>
-			<li class="navi" data-navianchor="anchor5"><a href="#contact">CONTACT</a></li>
+		<!-- <ul class="navi-wrap" id="navi">
+			<li class="navi active" data-menuanchor="Home"><a href="#">HOME</a></li>
+			<li class="navi" data-menuanchor="About"><a href="#about">PROFILE</a></li>
+			<li class="navi" data-menuanchor="Pofo"><a href="#pofo">PORTFOLIO</a></li>
+			<li class="navi" data-menuanchor="Skill"><a href="#skills">SKILL</a></li>
+			<li class="navi" data-menuanchor="Contact"><a href="#contact">CONTACT</a></li>
+		</ul> -->
+		<ul class="navi-wrap">
+			<li class="navi"><a class="home" href="#">HOME</a></li>
+			<li class="navi"><a class="about" href="#about">PROFILE</a></li>
+			<li class="navi"><a class="pofo" href="#pofo">PORTFOLIO</a></li>
+			<li class="navi"><a class="skill" href="#skills">SKILL</a></li>
+			<li class="navi"><a class="contact" href="#contact">CONTACT</a></li>
 		</ul>
 		<div class="monavi-wrap">
 			<nav class="navi-sub">
-				<a href="#profile">PROFILE</a>
+				<a href="#about">PROFILE</a>
 				<a href="#pofo">PORTFOLIO</a>
 				<a href="#skills">SKILL</a>
 				<a href="#contact">CONTACT</a>
@@ -56,7 +62,7 @@
 					<li></li>
 				</ul>
 			</div>
-			<a href="#about"><i class="fa fa-angle-double-down"></i></a>
+			<a class="about" href="#about"><i class="fa fa-angle-double-down"></i></a>
 		</h2>
 	</section>
 
@@ -64,13 +70,13 @@
 	<section class="profile-wrapper wrapper section" id="about">
 		<div class="title-wrap">
 			<h3 class="title">
-				<a href="#about"><i class="fa fa-paperclip"></i></a>
+				<a class="about" href="#about"><i class="fa fa-paperclip"></i></a>
 				ABOUT ME
 			</h3>
 		</div>
 		<div class="profile-wrap">
 			<div class="photo-wrap">
-				<img src="../img/pho1.jpg" alt="증명사진" class="img">
+				<img src="" alt="증명사진" class="img">
 				<button class="resume">이력서 보러가기 ></button>
 			</div>
 			<div class="profile-content">
@@ -91,7 +97,7 @@
 	<section class="portfolio-wrapper wrapper section" id="pofo">
 		<div class="title-wrap">
 			<h3 class="title">
-				<a href="#pofo"><i class="fa fa-paperclip"></i></a>
+				<a class="pofo" href="#pofo"><i class="fa fa-paperclip"></i></a>
 				PORTFOLIO
 			</h3>
 		</div>
@@ -112,51 +118,6 @@
 						</div>
 					</div>
 				</li>
-				<li class="slide" data-anchor="slide2">
-					<a href="https://db-search-17f77.web.app/" target="_blank">
-						<img src="../img/pho2.jpg" alt="site">
-					</a>
-					<div>
-						<div class="content">
-							react를 이용해 만든 검색 엔진 사이트입니다.2
-						</div>
-						<div class="use-skills">
-							javascript
-							css
-							html
-						</div>
-					</div>
-				</li>
-				<li class="slide" data-anchor="slide3">
-					<a href="https://db-search-17f77.web.app/" target="_blank">
-						<img src="../img/pho2.jpg" alt="site">
-					</a>
-					<div>
-						<div class="content">
-							react를 이용해 만든 검색 엔진 사이트입니다.3
-						</div>
-						<div class="use-skills">
-							javascript
-							css
-							html
-						</div>
-					</div>
-				</li>
-				<li class="slide" data-anchor="slide4">
-					<a href="https://db-search-17f77.web.app/" target="_blank">
-						<img src="../img/pho2.jpg" alt="site">
-					</a>
-					<div>
-						<div class="content">
-							react를 이용해 만든 검색 엔진 사이트입니다.4
-						</div>
-						<div class="use-skills">
-							javascript
-							css
-							html
-						</div>
-					</div>
-				</li>
 			</ul>
 		</div>
 	</section>
@@ -165,7 +126,7 @@
 	<section class="skill-wrapper wrapper section" id="skills">
 		<div class="title-wrap">
 			<h3 class="title">
-				<a href="#skills"><i class="fa fa-paperclip"></i></a>
+				<a class="skill" href="#skills"><i class="fa fa-paperclip"></i></a>
 				SKILLS
 			</h3>
 		</div>
@@ -203,7 +164,7 @@
 	<section class="contact-wrapper wrapper section" id="contact">
 		<div class="title-wrap">
 			<h3 class="title">
-				<a href="#contact"><i class="fa fa-paperclip"></i></a>
+				<a class="contact" href="#contact"><i class="fa fa-paperclip"></i></a>
 				CONTACT
 			</h3>
 		</div>
@@ -215,19 +176,18 @@
 				<a href="tel:01044781603"><i class="fa fa-mobile-alt"></i></a>
 			</div>
 		</div>
-		
-		<!-- footer-wrapper -->
-		<footer class="footer-wrapper">
-			<div class="footer-wrap">
-				<a href="https://github.com/danbe80" target="_blank">
-					<i class="fab fa-github"></i>
-				</a>
-				<h7>coded by HyeRin</h7>
-			</div>
-		</footer>
-		
 	</section>
-		<script src="../js/fullpage.min.js"></script>
+		
+	<!-- footer-wrapper -->
+	<footer class="footer-wrapper">
+		<div class="footer-wrap">
+			<a href="https://github.com/danbe80" target="_blank">
+				<i class="fab fa-github"></i>
+			</a>
+			<h7>coded by HyeRin</h7>
+		</div>
+	</footer>
+		<!-- <script src="../js/fullpage.min.js"></script> -->
 	<script src="../js/index.js"></script>
 </body>
 

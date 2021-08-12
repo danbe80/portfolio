@@ -47,10 +47,34 @@ $(function () {
 			}
 		}
 	}
+
+
+	var profileOffset = $('.profile-wrapper').offset().top;
+	var pofoOffset = $('.portfolio-wrapper').offset().top;
+	var skillOffset = $('.skill-wrapper').offset().top;
+	var contactOffset = $('.contact-wrapper').offset().top;
+
+
+	$('.home').on('click', function(){
+		$('html, body').animate({scrollTop: 0 }, 500);
+	})
+	$('.about').on('click', function(){
+		$('html, body').animate({scrollTop: (profileOffset - 120) }, 500);
+	})
+	$('.pofo').on('click', function(){
+		$('html, body').animate({scrollTop: (pofoOffset - 120) }, 500);
+	})
+	$('.skill').on('click', function(){
+		$('html, body').animate({scrollTop: (skillOffset - 120) }, 500);
+	})
+	$('.contact').on('click', function(){
+		$('html, body').animate({scrollTop: (contactOffset) }, 500);
+	})
+
 	$(window).scroll(function(){
 		var height = $(document).scrollTop();
-		// console.log(height)
 		var $logo = $('.header-wrap .logo > a');
+
 		if(height >= 400){
 			$logo.css('display', 'inline-block');
 			$naviWrap.css('display', 'flex');
@@ -63,16 +87,20 @@ $(function () {
 		}
 	})
 
-	$('#fullpage').fullpage({
+/* 	$('#fullpage').fullpage({
 		licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
 		scrollingSpeed: 700,
 		autoScrolling: true,
+		controlArrows: true,
 		fitToSection: true,
 		fitToSectionDelay: 1000,
 		scrollBar: true,
 		controlArrows: true,
 		verticalCentered: true,
-		anchors: ['anchor1', 'anchor2', 'anchor3'],
+		navigation: true,
+		navigationPosition: screenLeft,
+		navigationTooltips: ['Home', 'About', 'Portfolio', 'Skill', 'Contact'],
+		anchors: ['Home', 'About', 'Pofo', 'Skill', 'Contact'],
 		menu: '#navi'
-	})
+	}) */
 });
