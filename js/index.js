@@ -47,25 +47,12 @@ $(function () {
 			}
 		}
 	}
-
-/* 	var winH = window.innerHeight;
-	var scrollY = window.scrollY;
- */
-/* 	const offsetprofile = $("#about").offset();
-	$('html, body').animate({ scrollTop: offsetprofile.top }, 500);
-	const offsetpofo = $("#pofo").offset();
-	$('html, body').animate({ scrollTop: offsetpofo.top }, 500);
-	const offsetskill = $("#skills").offset();
-	$('html, body').animate({ scrollTop: offsetskill.top }, 500);
-
- */
 	$(window).scroll(function(){
 		var height = $(document).scrollTop();
 		// console.log(height)
 		var $logo = $('.header-wrap .logo > a');
-		console.log($logo);
 		if(height >= 400){
-			$('.header-wrap .logo > a').css('display', 'inline-block');
+			$logo.css('display', 'inline-block');
 			$naviWrap.css('display', 'flex');
 			$headerWrapper.css('background-color', '#d4e3ff');
 		}
@@ -76,4 +63,16 @@ $(function () {
 		}
 	})
 
+	$('#fullpage').fullpage({
+		licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+		scrollingSpeed: 700,
+		autoScrolling: true,
+		fitToSection: true,
+		fitToSectionDelay: 1000,
+		scrollBar: true,
+		controlArrows: true,
+		verticalCentered: true,
+		anchors: ['anchor1', 'anchor2', 'anchor3'],
+		menu: '#navi'
+	})
 });

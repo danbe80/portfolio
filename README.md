@@ -6,9 +6,14 @@
 
 
 ### 전체적으로 사용한 색상
-1. 배경색 : 
-2. 글씨색 : 
+1. 배경색 : #d4e3ffc5 / #c9d7ff
+2. 글씨색 : #fff / #111
 
-
-typing animation 참고 사이트 : https://gahyun-web-diary.tistory.com/2
+#### 목차
+ 1. Profile(about me)
+ 2. PortFolio
+ 3. Skill
+ 4. contact 
+  
+typing animation 참고 사이트 : https://gahyun-web-diary.tistory.com/2 <br>
 scroll event site : https://nykim.work/56?category=692676

@@ -11,7 +11,7 @@ html, body {
 .wrapper {
 	max-width: 1600px;
 	margin: auto;
-	margin-top: 96px;
+	/* margin-top: 96px; */
 }
 /* header-wrapper :: 헤더 메뉴 */
 .header-wrapper {
@@ -109,12 +109,12 @@ html, body {
 /* main-wrapper */
 .main-wrapper {
 	width: 100%;
-	height: 800px;
+	/* height: 800px; */
 	font-size: 3em;
 	text-align: center;
-	padding: 2em 0;
+	/* padding: 2em 0; */
 	line-height: 2;
-	letter-spacing: -5px;
+	letter-spacing: -3px;
 }
 .main-wrapper .title i {
 	margin-top: .5em;
@@ -147,8 +147,7 @@ html, body {
 .profile-wrapper {
 	width: 100%;
 	font-size: 2em;
-	padding: 3em 0;
-	border: 1px solid red;
+	/* padding: 3em 0; */
 }
 .profile-wrapper .title-wrap {
 	display: inline;
@@ -211,7 +210,6 @@ html, body {
 
 /* portfolio-wrapper */
 .portfolio-wrapper {
-	border: 1px solid red;
 	font-size: 2em;
 	padding: 3em 0;
 }
@@ -252,7 +250,6 @@ html, body {
 	width: 100%;
 }
 .portfolio-wrap .content-wrap li > div {
-	border: 1px solid rebeccapurple;
 	width: 50%;
 	margin-left: 2em;
 
@@ -265,9 +262,8 @@ html, body {
 
 /* skill-wrapper */
 .skill-wrapper {
-	border: 1px solid red;
 	font-size: 2em;
-	padding: 3em 0;
+	/* padding: 3em 0; */
 }
 .skill-wrapper .title-wrap .title{
 	font-family: 'Permanent Marker', cursive;
@@ -304,9 +300,8 @@ html, body {
 
 /* contact-wrapper */
 .contact-wrapper {
-	border: 1px solid red;
 	font-size: 2em;
-	padding: 3em 0;
+	/* padding: 3em 0; */
 }
 .contact-wrapper .title-wrap .title{
 	font-family: 'Permanent Marker', cursive;
@@ -356,14 +351,15 @@ html, body {
 /* footer-wrapper */
 .footer-wrapper {
 	background-color: #d4e3ff;
-	height: 300px;
+	/* height: 300px; */
+	margin-top: 96px; 
 }
 .footer-wrapper .footer-wrap {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	padding: 6em 0;
+	/* padding: 6em 0; */
 	flex-direction: column;
 }
 .footer-wrapper .footer-wrap > a {
