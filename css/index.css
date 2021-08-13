@@ -309,7 +309,7 @@ body {
 .portfolio-wrapper .portfolio-wrap {
 	width: 90%;
 	margin: 0 5%;
-	padding: 3em 0;
+	padding: 2em 0;
 }
 
 .portfolio-wrap .swiper-pagination {
@@ -354,6 +354,10 @@ body {
 	border: 5px solid #91a5dd;
 	border-radius: 10px;
 }
+.portfolio-wrap .swiper-wrapper .swiper-slide .slide > a img {
+	width: 100%;
+	height: 200px;
+}
 
 .portfolio-wrap .swiper-wrapper .swiper-slide .slide .content {
 	font-size: 1.5em;
@@ -368,10 +372,10 @@ body {
 	flex-direction: column;
 }
 
-.portfolio-wrap .swiper-wrapper .swiper-slide .slide .use-skills>i {
+.portfolio-wrap .swiper-wrapper .swiper-slide .slide .use-skills > i {
 	font-size: 2em;
 	margin-top: .5em;
-	color: aqua;
+	color: #555;
 }
 
 /* skill-wrapper */

@@ -70,10 +70,8 @@ $(function () {
 
 	$(window).scroll(function(){
 		var height = $(document).scrollTop();
-		console.log(height);
 		var $logo = $('.header-wrap .logo > a');
 		var skillOffset = $('.skill-wrapper').offset().top;
-		console.log(skillOffset);
 
 		if(height >= 400){
 			$logo.css('display', 'inline-block');
