@@ -91,15 +91,28 @@ $(function () {
 		}
 	})
 
+	$('.swiper-container').mouseenter(function(){
+		mySwiper.autoplay.stop();
+	})
+	$('.swiper-container').mouseleave(function(){
+		mySwiper.autoplay.start();
+	})
+
 
 	var mySwiper = new Swiper('.swiper-container', {
 		loop: true,
+		speed: 1000,
 		pagination: {
-			el: '.swiper-pagination'
+			el: '.swiper-pagination',
+			clickable: true
+		},
+		autoplay: {
+			delay: 3000,
+			disableOnInteraction: false,
 		},
 		navigation: {
 			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
+			prevEl: '.swiper-button-prev'
 		},
 
 	})
