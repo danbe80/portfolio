@@ -49,26 +49,30 @@ $(function () {
 	}
 
 
-	var profileOffset = $('.profile-wrapper').offset().top;
-	var pofoOffset = $('.portfolio-wrapper').offset().top;
-	var skillOffset = $('.skill-wrapper').offset().top;
-	var contactOffset = $('.contact-wrapper').offset().top;
+
+
+
+
 
 
 	$('.home').on('click', function(){
 		$('html, body').animate({scrollTop: 0 }, 500);
 	})
 	$('.about').on('click', function(){
-		$('html, body').animate({scrollTop: (profileOffset - 120) }, 500);
+		var profileOffset = $('.profile-wrapper').offset().top;
+		$('html, body').animate({scrollTop: (profileOffset - 60) }, 500);
 	})
 	$('.pofo').on('click', function(){
-		$('html, body').animate({scrollTop: (pofoOffset - 120) }, 500);
+		var pofoOffset = $('.portfolio-wrapper').offset().top;
+		$('html, body').animate({scrollTop: (pofoOffset - 80) }, 500);
 	})
 	$('.skill').on('click', function(){
-		$('html, body').animate({scrollTop: (skillOffset - 120) }, 500);
+		var skillOffset = $('.skill-wrapper').offset().top;
+		$('html, body').animate({scrollTop: (skillOffset - 80) }, 500);
 	})
 	$('.contact').on('click', function(){
-		$('html, body').animate({scrollTop: (contactOffset) }, 500);
+		var contactOffset = $('.contact-wrapper').offset().top;
+		$('html, body').animate({scrollTop: (contactOffset - 5) }, 500);
 	})
 
 	$(window).scroll(function(){
@@ -87,20 +91,16 @@ $(function () {
 		}
 	})
 
-/* 	$('#fullpage').fullpage({
-		licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
-		scrollingSpeed: 700,
-		autoScrolling: true,
-		controlArrows: true,
-		fitToSection: true,
-		fitToSectionDelay: 1000,
-		scrollBar: true,
-		controlArrows: true,
-		verticalCentered: true,
-		navigation: true,
-		navigationPosition: screenLeft,
-		navigationTooltips: ['Home', 'About', 'Portfolio', 'Skill', 'Contact'],
-		anchors: ['Home', 'About', 'Pofo', 'Skill', 'Contact'],
-		menu: '#navi'
-	}) */
+
+	var mySwiper = new Swiper('.swiper-container', {
+		loop: true,
+		pagination: {
+			el: '.swiper-pagination'
+		},
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+
+	})
 });

@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>MyPoFo</title>
 	<link rel="stylesheet" href="../css/all.min.css">
-	<!-- <link rel="stylesheet" href="../css/fullpage.min.css"> -->
+	<link rel="stylesheet" href="../css/swiper-bundle.min.css">
 	<link rel="stylesheet" href="../css/base.css">
 	<link rel="stylesheet" href="../css/index.css">
 	<script src="../js/jquery-3.5.1.min.js"></script>
@@ -15,16 +16,9 @@
 <body>
 	<header class="header-wrapper">
 		<div class="header-wrap">
-			<h1 class="logo"><a class="home" href="#">MY <span>POFO</span></a></h1> 
+			<h1 class="logo"><a class="home" href="#">MY <span>POFO</span></a></h1>
 			<span class="bars"><i class="fa fa-bars"></i></span>
 		</div>
-		<!-- <ul class="navi-wrap" id="navi">
-			<li class="navi active" data-menuanchor="Home"><a href="#">HOME</a></li>
-			<li class="navi" data-menuanchor="About"><a href="#about">PROFILE</a></li>
-			<li class="navi" data-menuanchor="Pofo"><a href="#pofo">PORTFOLIO</a></li>
-			<li class="navi" data-menuanchor="Skill"><a href="#skills">SKILL</a></li>
-			<li class="navi" data-menuanchor="Contact"><a href="#contact">CONTACT</a></li>
-		</ul> -->
 		<ul class="navi-wrap">
 			<li class="navi"><a class="home" href="#">HOME</a></li>
 			<li class="navi"><a class="about" href="#about">PROFILE</a></li>
@@ -42,13 +36,13 @@
 		</div>
 	</header>
 
-	<section class="main-wrapper wrapper section">
+	<section class="main-wrapper wrapper">
 		<h2 class="title">
 			<div class="typing-txt">
 				<ul>
 					<li>안녕하세요!</li>
-					<li>주니어 프론트엔드 개발자 이혜린입니다.</li>
-					<li>저의 포트폴리오를 보시려면</li>
+					<li>프론트엔드 개발자 이혜린입니다.</li>
+					<li>제 포트폴리오를 보시려면</li>
 					<li>밑으로 스크롤 해주세요!</li>
 					<li>♪♪(oᐛ)o～♪♪</li>
 				</ul>
@@ -67,63 +61,89 @@
 	</section>
 
 	<!-- profile-wrapper -->
-	<section class="profile-wrapper wrapper section" id="about">
+	<section class="profile-wrapper wrapper" id="about">
 		<div class="title-wrap">
 			<h3 class="title">
 				<a class="about" href="#about"><i class="fa fa-paperclip"></i></a>
 				ABOUT ME
 			</h3>
 		</div>
+
 		<div class="profile-wrap">
-			<div class="photo-wrap">
-				<img src="" alt="증명사진" class="img">
-				<button class="resume">이력서 보러가기 ></button>
-			</div>
 			<div class="profile-content">
+				<div class="photo-wrap">
+					<img src="../img/photo1.jpg" alt="증명사진" class="img">
+				</div>
 				<div class="content-title">
 					<i class="fa fa-quote-left"></i>
 					<h4 class="title">꾸준한 노력과 인내심을 가지고 목표를 향하는 인재</h4>
 					<i class="fa fa-quote-right"></i>
 				</div>
-				<div class="content">
-					안녕하세요.<br>
-					저는 항상 목표를 가지고 살아가는 개발자 이혜린입니다.
-
+				<div class="information">
+					<h4 class="name">이혜린</h4>
+					<div class="birthday">97. 03. 16</div>
+					<div class="address">경기도 시흥시 은행동</div>
+					<div class="school">한신대학교 정보통신학부 졸업</div>
+					<div class="study">하이미디어 신촌캠퍼스 UI/UX 웹디자인&웹퍼블리셔 수료</div>
+					<div class="email">danbe8080@gmail.com</div>
+					<div class="phone">010-4478-1603</div>
+					<div class="github">
+						<a href="https://github.com/danbe80">https://github.com/danbe80</a>
+					</div>
 				</div>
+				<a href="../img/프론트엔드 이혜린 이력서.pdf" target="_blank" class="resume">이력서 보러가기 ></a>
 			</div>
 		</div>
 	</section>
 	<!-- portfolio-wrapper -->
-	<section class="portfolio-wrapper wrapper section" id="pofo">
+	<section class="portfolio-wrapper wrapper" id="pofo">
 		<div class="title-wrap">
 			<h3 class="title">
 				<a class="pofo" href="#pofo"><i class="fa fa-paperclip"></i></a>
 				PORTFOLIO
 			</h3>
 		</div>
-		<div class="portfolio-wrap">
-			<ul class="content-wrap">
-				<li class="slide" data-anchor="slide1">
-					<a href="https://db-search-17f77.web.app/" target="_blank">
-						<img src="../img/pho2.jpg" alt="site">
-					</a>
-					<div>
-						<div class="content">
-							react를 이용해 만든 검색 엔진 사이트입니다.
-						</div>
+		<div class="portfolio-wrap swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<div class="slide">
+						<a href="https://db-search-17f77.web.app/" target="_blank">
+							<img src="../img/logo.png" alt="site">
+						</a>
+						<h4 class="content">
+							Cherry Search
+						</h4>
 						<div class="use-skills">
-							javascript
-							css
-							html
+							reactJs 사용하여 만든 Search Engine Site
+							<i class="fab fa-react"></i>
 						</div>
 					</div>
-				</li>
-			</ul>
+				</div>
+				<div class="swiper-slide">
+					<div class="slide">
+						<a href="https://db-search-17f77.web.app/" target="_blank">
+							<img src="../img/logo.png" alt="site">
+						</a>
+						<div class="content">
+							Cherry Search
+						</div>
+						<div class="use-skills">
+							reactJs 사용하여 만든 Search Engine Site
+							<i class="fab fa-react"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="btn-wrap">
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			</div>
+			<div class="swiper-pagination"></div>
 		</div>
 	</section>
 
 	<!-- skill-wrapper -->
-	<section class="skill-wrapper wrapper section" id="skills">
+	<section class="skill-wrapper wrapper" id="skills">
 		<div class="title-wrap">
 			<h3 class="title">
 				<a class="skill" href="#skills"><i class="fa fa-paperclip"></i></a>
@@ -161,7 +181,7 @@
 	</section>
 
 	<!-- contact-wrappper -->
-	<section class="contact-wrapper wrapper section" id="contact">
+	<section class="contact-wrapper wrapper" id="contact">
 		<div class="title-wrap">
 			<h3 class="title">
 				<a class="contact" href="#contact"><i class="fa fa-paperclip"></i></a>
@@ -177,17 +197,18 @@
 			</div>
 		</div>
 	</section>
-		
+
 	<!-- footer-wrapper -->
 	<footer class="footer-wrapper">
 		<div class="footer-wrap">
+			<a class="home" href="#"><i class="fa fa-angle-up"></i></a>
 			<a href="https://github.com/danbe80" target="_blank">
 				<i class="fab fa-github"></i>
 			</a>
 			<h7>coded by HyeRin</h7>
 		</div>
 	</footer>
-		<!-- <script src="../js/fullpage.min.js"></script> -->
+	<script src="../js/swiper-bundle.min.js"></script>
 	<script src="../js/index.js"></script>
 </body>
 

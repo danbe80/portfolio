@@ -10,9 +10,10 @@ html, body {
 }
 .wrapper {
 	max-width: 1600px;
-	margin: auto;
-	margin-top: 96px;
+	margin: 3em auto;
 }
+
+
 /* header-wrapper :: 헤더 메뉴 */
 .header-wrapper {
 	width: 100%;
@@ -142,12 +143,12 @@ html, body {
 	100%{ border-right: 1px solid #fff; }
 }
 
-
 /* profile-wrapper */
 .profile-wrapper {
 	font-size: 2em;
 	padding: 3em 0;
 }
+
 .profile-wrapper .title-wrap {
 	display: inline;
 }
@@ -166,35 +167,58 @@ html, body {
 	opacity: 1;
 }
 .profile-wrapper .profile-wrap{
-	display: flex;
 	margin: 1%;
 }
-.profile-wrap .photo-wrap {
-	margin: .325em;
-	width: 39%;
+.profile-wrapper .profile-wrap .profile-content {
+	width: 70%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
-.profile-wrap .photo-wrap > button {
+.profile-wrapper .profile-wrap .profile-content .information {
+	font-size: .875em;
+	margin-bottom: .5em;
+}
+.profile-wrap .photo-wrap {
+	width: 35%;
+}
+.profile-wrap .photo-wrap > img {
+	border: 10px solid #91a5dd;
+	border-radius: 50%;
+}
+.profile-wrap .profile-content .resume {
+	width: 70%;
 	font-size: .5em;
 	font-weight: bold;
 	padding: 1em 2em; 
-	margin-top: 1.5em;
+	margin-top: .5em;
 	background-color: #fff;
 	border: 2px solid #91a5dd;
+	border-radius: 5px;
 }
-.profile-wrap .photo-wrap > button:hover {
+.profile-wrap .profile-content .resume:hover {
+	transition: all .5s;
 	background-color: #91a5dd;
 	color: #fff;
 }
 .profile-wrap .profile-content{
 	width: 70%;
-	display: flex;
-	flex-direction: column;
 	margin: .5em 1% 0 1em;
+}
+.profile-wrap .profile-content .information > * {
+	font-size: .875em;
+	margin-bottom: .325em;
+}
+.profile-wrap .profile-content .information .github > a:hover {
+	color: #90adff;
+	text-decoration: underline;
 }
 .profile-wrap .profile-content .content-title {
 	font-size: 1em;
 	font-weight: bold;
-	margin-bottom: 1.5em;
+	margin: .75em 0;
 	letter-spacing: -2px;
 	display: flex;
 	justify-content: center;
@@ -205,12 +229,14 @@ html, body {
 }
 .profile-wrap .profile-content .content {
 	font-size: .75em;
+	margin-bottom: 1em;
 }
 
 /* portfolio-wrapper */
 .portfolio-wrapper {
 	font-size: 2em;
 	padding: 3em 0;
+	position: relative;
 }
 .portfolio-wrapper .title-wrap .title{
 	font-family: 'Permanent Marker', cursive;
@@ -227,42 +253,43 @@ html, body {
 	opacity: 1;
 }
 .portfolio-wrapper .portfolio-wrap {
-	width: 80%;
-	margin: 0 10%;
+	width: 90%;
+	margin: 0 5%;
+	padding: 3em 0;
 }
-.portfolio-wrapper .portfolio-wrap .content-wrap {
-	width: 100%;
-	margin: 0 1%;
+.portfolio-wrap .swiper-pagination {
+	margin-bottom: 1.5em;
+}
+
+}
+.portfolio-wrap .swiper-wrapper .swiper-slide .slide > a{
+	padding: 2em 1.875em;
+	border: 5px solid #91a5dd;
+	border-radius: 10px;
+}
+.portfolio-wrap .swiper-wrapper .swiper-slide .slide .content {
+	font-size: 1.5em;
+	margin: .875em 0;
+}
+.portfolio-wrap .swiper-wrapper .swiper-slide .slide .use-skills {
+	font-size: .75em;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 2.5em 0;
-	overflow: visible ;
+	flex-direction: column;
 }
-.portfolio-wrapper .portfolio-wrap .content-wrap li {
-	display: none;
+.portfolio-wrap .swiper-wrapper .swiper-slide .slide .use-skills > i{
+	font-size: 2em;
+	margin-top: .5em;
+	color: aqua;
 }
-.portfolio-wrapper .portfolio-wrap .content-wrap li > a {
-	width: 50%;
-}
-.portfolio-wrapper .portfolio-wrap .content-wrap li > a > img {
-	width: 100%;
-}
-.portfolio-wrap .content-wrap li > div {
-	width: 50%;
-	margin-left: 2em;
-
-}
-.portfolio-wrapper .portfolio-wrap .content-wrap li:first-child {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
 /* skill-wrapper */
 .skill-wrapper {
 	font-size: 2em;
 	padding: 3em 0;
+}
+.skill-wrapper .title-wrap {
+	margin-bottom: 2.5em;
 }
 .skill-wrapper .title-wrap .title{
 	font-family: 'Permanent Marker', cursive;
@@ -350,7 +377,6 @@ html, body {
 /* footer-wrapper */
 .footer-wrapper {
 	background-color: #d4e3ff;
-	height: 300px;
 	margin-top: 96px; 
 }
 .footer-wrapper .footer-wrap {
