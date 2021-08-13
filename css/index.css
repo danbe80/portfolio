@@ -402,24 +402,36 @@ body {
 }
 
 .skill-wrapper .skill-wrap .skill {
-	display: flex;
-	margin: .5em;
+	width: 90%;
+	margin: 1em 5%;
 }
 
 .skill-wrapper .skill-wrap .skill>.title {
-	width: 15%;
-}
-
-.skill-wrapper .skill-wrap .skill>.bar {
-	width: 85%;
-	background-color: #91a5dd;
-	color: #f1f1f1;
+	margin: .5em 1em;
 	text-align: center;
-	padding: .25em;
+}
+.skill-wrapper .skill-wrap .skill .bar .bar-inner {
+	width: 0;
+	height: 35px;
+	line-height: 35px;
+	background-color: #90adff;
+	border-radius: 5px 0 0 5px;
+}
+.skill-wrapper .skill-wrap .skill .bar .bar-percent {
+	position: absolute;
+	color: #fff;
+	top: 0;
+	left: 48%;
 }
 
-.skill-wrapper .skill-wrap .skill>.bar>span {
-	font-size: 1em;
+.skill-wrapper .skill-wrap .skill .bar {
+	width: 90%;
+	margin: 0 5%;
+	height: 35px;
+	background-color: #eee;
+	border-radius: 5px;
+	position: relative;
+	transition: all 2s linear;
 }
 
 

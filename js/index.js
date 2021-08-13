@@ -48,13 +48,6 @@ $(function () {
 		}
 	}
 
-
-
-
-
-
-
-
 	$('.home').on('click', function(){
 		$('html, body').animate({scrollTop: 0 }, 500);
 	})
@@ -77,7 +70,10 @@ $(function () {
 
 	$(window).scroll(function(){
 		var height = $(document).scrollTop();
+		console.log(height);
 		var $logo = $('.header-wrap .logo > a');
+		var skillOffset = $('.skill-wrapper').offset().top;
+		console.log(skillOffset);
 
 		if(height >= 400){
 			$logo.css('display', 'inline-block');
@@ -89,7 +85,14 @@ $(function () {
 			$naviWrap.css('display', 'none');
 			$('.header-wrap .logo > a').css('display', 'flex');
 		}
-	})
+		if(height >= (skillOffset - 96)){
+			$('.bar').each(function(){
+					$(this).find('.bar-inner').animate({
+						width: $(this).attr('data-width')
+					},2000)
+				})
+			}
+	});
 
 	$('.swiper-container').mouseenter(function(){
 		mySwiper.autoplay.stop();
